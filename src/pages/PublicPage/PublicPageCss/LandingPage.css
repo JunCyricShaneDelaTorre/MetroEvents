@@ -1,0 +1,30 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.nav-links{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+
+.loginsignup-link{
+    margin-left: auto;
+}
+
+.Logo,.Login,.SignUp{
+    text-decoration: none;
+}
+
+.Login{
+    margin-right: 20px;
+}
+
+.SignUp{
+    margin-right: 20px;
+}

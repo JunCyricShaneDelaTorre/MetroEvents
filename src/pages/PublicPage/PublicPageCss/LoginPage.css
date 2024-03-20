@@ -1,0 +1,30 @@
+.login-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+.login-container{
+    width: 400px;
+    padding: 30px;
+    border: 5px solid transparent; /* Set border width and make it transparent */
+    border-radius: 20px; /* Set border radius to create rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow for a cool effect */
+}
+
+.welcome-text{
+    margin: 0;
+}
+
+.secondary-text{
+    margin-bottom: 30px;
+}
+
+.email-content{
+    margin-bottom: 20px;
+}
+
+.password-content{
+    margin-bottom: 20px;
+}
