@@ -1,0 +1,52 @@
+.eventBrowser-wrapper{
+    display: flex;
+    justify-content: center;
+
+}
+
+
+.welcome-text h1{
+    padding-top: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    
+}
+
+.event-secondary-text{
+    padding-top: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+
+    
+}
+
+.eventBrowser-content{
+    padding-left: 10px;
+    padding-right: 10px;
+    
+}
+
+.event-container{
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    gap: 35px 65px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scrollbar-width: none;
+    text-align: justify;
+    width: 900px;
+    height: 400px;
+    justify-content: space-around;   
+}
+
+.event-item{
+    display: flex;
+    border: 1px solid black; /* Set border width and make it transparent */
+    border-radius: 10px; /* Set border radius to create rounded corners */
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1); /* Add box shadow for a cool effect */
+    padding: 80px;
+}
+
