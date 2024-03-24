@@ -4,6 +4,7 @@ import './PublicPageCss/LoginPage.css';
 
 
 export default function LoginPage(){
+    
     return(
         <div className='login-wrapper'>
             <div className='login-container'>
@@ -32,7 +33,7 @@ export default function LoginPage(){
                             </div>
                         </div>
                         
-                        <button type='submit'>
+                        <button type='submit' >
                             <div className='btn-text'>Login</div>
                         </button>
                     </Form>
