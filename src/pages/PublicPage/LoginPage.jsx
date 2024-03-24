@@ -1,10 +1,16 @@
 import * as React from 'react';
+// import {  } from 'react';
 import {Form} from 'react-router-dom';
 import './PublicPageCss/LoginPage.css';
+import supabase from '../../config/supabaseClient';
 
-
+const SupabaseLoader = () => {
+    console.log(supabase);
+    return null; // or you can return some JSX if needed
+};
 export default function LoginPage(){
     return(
+        
         <div className='login-wrapper'>
             <div className='login-container'>
                 <div className='welcome-section'>
@@ -36,6 +42,9 @@ export default function LoginPage(){
                             <div className='btn-text'>Login</div>
                         </button>
                     </Form>
+                </div>
+                <div>
+                    <SupabaseLoader />
                 </div>
             </div>
         </div>
