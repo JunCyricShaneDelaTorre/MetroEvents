@@ -22,15 +22,46 @@
     
 }
 
-.dashboard-item-container{
-    display: grid;
+.dashboard-item-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Align items in the center horizontally */
     gap: 1.5rem;
     text-align: justify;
     width: 900px;
     height: 400px;
     overflow-x: hidden;
     overflow-y: auto;
-    scrollbar-width: none;   
+    scrollbar-width: none;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 10px;
 }
 
+
+.event-item-home {
+    display: flex;
+    background-color: rgba(144, 93, 3, 0.99);
+    border-radius: 15px; /* Set border radius to create rounded corners */
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1); /* Add box shadow for a cool effect */
+    padding: 40px;
+    width: 500px;
+    height: 80px;
+    position: relative;
+    transition: transform 0.3s ease; /* Add smooth transition effect */
+}
+
+.event-item-home:hover {
+    transform: scale(1.10); /* Scale the event item on hover */
+}
+
+.event-title{
+    width: 500px;
+    color: #ffffff;
+    font-size: 15px;
+    font-family: 'Google Sans';
+    font-weight: 700;
+    text-align: left;
+    margin-bottom: 30px;
+}
 
