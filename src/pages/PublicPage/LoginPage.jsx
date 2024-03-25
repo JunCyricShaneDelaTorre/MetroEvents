@@ -4,6 +4,7 @@ import supabase from '../../config/supabaseClient';
 import { useState } from 'react'
 
 
+
         <div className='login-wrapper'>
             <div className='login-container'>
                 <div className='welcome-section'>
@@ -28,7 +29,7 @@ import { useState } from 'react'
 
                             </div>
                         </div>
-                        <button type='submit' className='submit-button'>
+
                             <div className='btn-text'>Login</div>
                         </button>
                     </form>
