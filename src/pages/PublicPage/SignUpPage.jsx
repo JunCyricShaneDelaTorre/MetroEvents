@@ -7,9 +7,9 @@ export default function SignUpPage(){
         <div className='signup-wrapper'>
         <div className='signup-container'>
             <div className='welcome-section'>
-                <h1 className='welcome-text'>Welcome to mecobaby143</h1>
+                <h1 className='welcome-text'>Welcome to PlanTek</h1>
                 <div className='secondary-text'>
-                    Hello New Person, Sign up to Join or Create Events Now!
+                    Hello There, Sign up to Join or Create Events Now!
                 </div>
             </div>
             <div className='signup-form'>
