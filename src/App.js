@@ -14,6 +14,8 @@ import Header from './components/Header';
 import Dashboard from './pages/Authenticated/Dashboard';
 import OrganizerDashboard from './pages/Organizer/OrganizerDashboard';
 import ProfilePage from './pages/Authenticated/ProfilePage';
+import EventCreationPage from './pages/Authenticated/EventCreationPage';
+import Footer from './components/Footer';
 
 
 
@@ -66,6 +68,17 @@ const router = createBrowserRouter([
       }
     ]
   },
+  //test rani na route to see the contents
+  {
+    path:'CreateEvent',
+    element: <EventCreationPage />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path:'footer',
+    element: <Footer />,
+    errorElement: <ErrorPage />,
+  }
  
   
 ]);
