@@ -1,14 +1,18 @@
 import * as React from 'react';
 import './PublicPageCss/EventBrowserPage.css'
+// import { Link } from 'react-router-dom';
+
+
 
 
 export default function EventBrowserPage(){
+
     return(
         <div className='eventBrowser-wrapper'>
             <div className='eventBrowser-container'>
 
                 <div className='welcome-text'>
-                    <h1>Explore Events Here!</h1>
+                    <h1>Explore Events Here</h1>
                 </div>
                 <div className='event-secondary-text'>
                     Explore events here, we feature new events weekly for you to explore!

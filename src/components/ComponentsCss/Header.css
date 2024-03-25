@@ -1,0 +1,28 @@
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.nav-links{
+    text-decoration: none;
+}
+
+.center-and-right{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.center-container{
+    display: flex;
+    gap: 2rem;
+    
+}
+
+.right-container{
+    display: flex;
+    gap: 1.5rem;
+    
+}
+
