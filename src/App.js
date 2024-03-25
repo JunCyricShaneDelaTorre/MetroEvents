@@ -14,6 +14,9 @@ import Header from './components/Header';
 import Dashboard from './pages/Authenticated/Dashboard';
 import OrganizerDashboard from './pages/Organizer/OrganizerDashboard';
 import ProfilePage from './pages/Authenticated/ProfilePage';
+import AdminDashboard from './pages/Administrator/AdminDashboard';
+import AdminLogin from './pages/Administrator/AdminLogin';
+import AdminHeader from './pages/Administrator/AdminHeader';
 
 
 
@@ -66,6 +69,17 @@ const router = createBrowserRouter([
       }
     ]
   },
+  {
+    path: 'admin',
+    element: <AdminLogin />,
+    errorElement: <ErrorPage />,
+    
+  },
+ {
+  path: 'AdminDashboard',
+  element: <div><AdminHeader/> <AdminDashboard /> </div>,
+  errorElement: <ErrorPage />
+ },
  
   
 ]);
@@ -77,7 +91,7 @@ function App() {
       background: 'linear-gradient(to bottom, #F2F2F2, #FFFDD9)',
       /* Other styles for your element */
       width: '100%',
-      height: '100vh', // Adjust height as needed
+      height: '', // Adjust height as needed
     }}>
       <RouterProvider router={router}/>
     </div>

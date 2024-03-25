@@ -1,0 +1,59 @@
+.admin-login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.admin-login-container {
+    width: 400px;
+    padding: 20px;
+    border: 5px solid transparent; /* Set border width and make it transparent */
+    border-radius: 20px; /* Set border radius to create rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow for a cool effect */
+}
+
+.admin-login-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.admin-secondary-text {
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.admin-email-content,
+.admin-password-content {
+    margin-bottom: 20px;
+}
+
+.admin-input-box {
+    width: 300px; /* Adjust width as needed */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.admin-submit-button {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(90deg, rgba(210, 188, 126, 0.64) 0%, #C7D299 43%, #C9B500 100%);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.admit-submit-button:hover {
+    opacity: 0.9; /* Example hover effect */
+}
