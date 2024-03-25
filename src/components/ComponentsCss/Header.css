@@ -1,12 +1,8 @@
-.nav-bar{
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-}
-
 .nav-links{
     text-decoration: none;
 }
+
+
 
 .center-and-right{
     display: flex;
@@ -14,11 +10,12 @@
     width: 90%;
 }
 
-.center-container{
+.center-container {
     display: flex;
     gap: 2rem;
-    
 }
+
+
 
 .right-container{
     display: flex;
@@ -26,3 +23,113 @@
     
 }
 
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.nav-links{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navtext {
+    font-weight: 500;
+    text-align: left;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Google Sans';
+    font-weight: 700;
+    color: white;
+
+}
+
+.loginsignup-link{
+    margin-left: auto;
+    
+}
+
+.Logo,.Login,.SignUp{
+    text-decoration: none;
+    color: #EBC351;
+
+}
+
+.Login{
+    margin-right: 20px;
+}
+
+.SignUp{
+    margin-right: 20px;
+}
+
+.container {
+    width: auto;
+    height: auto;
+    padding-bottom: 198px;
+    padding-right: 738px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  
+  
+  .logo-container {
+    width: 202px;
+    height: 46px;
+    position: relative;
+  }
+  
+  .logo-text {
+    width: 154px;
+    height: 45px;
+    position: absolute;
+    color: #EBC351;
+    font-size: 40px;
+    font-family: 'Google Sans';
+    font-weight: 700;
+    word-wrap: break-word;
+  }
+/*   
+  .img {
+    width: 48px;
+    height: 46px;
+    position: absolute;
+    left: 154px;
+    top: 0;
+  } */
+  
+  .title {
+    width: 944px;
+    color: #402A04;
+    font-size: 64px;
+    font-family: 'Google Sans';
+    font-weight: 700;
+    text-align: left;
+  }
+  
+  .subtitle {
+    color: rgba(176, 112, 0, 0.58);
+    font-size: 32px;
+    font-family: 'Google Sans';
+    font-weight: 500;
+    text-align: left;
+  }
+  
+
+  
+  .custom-button:hover {
+    opacity: 0.9; /* Example hover effect */
+  }
+  
+  .buttonc {
+    padding-top: 20px;
+  }
