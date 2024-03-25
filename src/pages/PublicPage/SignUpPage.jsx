@@ -2,7 +2,9 @@ import * as React from 'react';
 import {Form} from 'react-router-dom';
 import './PublicPageCss/SignUpPage.css';
 
-export default function SignUpPage(){
+
+export default function SignUpPage() {
+
     return(
         <div className='signup-wrapper'>
         <div className='signup-container'>
