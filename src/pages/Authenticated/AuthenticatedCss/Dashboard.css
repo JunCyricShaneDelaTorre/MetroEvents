@@ -33,12 +33,4 @@
     scrollbar-width: none;   
 }
 
-.event-item{
-    display: flex;
-    border: 1px solid black; /* Set border width and make it transparent */
-    border-radius: 10px; /* Set border radius to create rounded corners */
-    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1); /* Add box shadow for a cool effect */
-    padding: 40px;
-    
-}
 
