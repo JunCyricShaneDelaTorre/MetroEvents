@@ -1,32 +1,25 @@
-import * as React from 'react';
-// import {  } from 'react';
-import {Form} from 'react-router-dom';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import './PublicPageCss/LoginPage.css';
-import supabase from '../../config/supabaseClient';
 
-const SupabaseLoader = () => {
-    console.log(supabase);
-    return null; // or you can return some JSX if needed
-};
-export default function LoginPage(){
-    return(
-        
+export default function LoginPage() {
+    return (
         <div className='login-wrapper'>
             <div className='login-container'>
                 <div className='welcome-section'>
-                    <h1 className='welcome-text'>Welcome to mecobaby143</h1>
+                    <h1 className='welcome-text'>Welcome to PlanTek</h1>
                     <div className='secondary-text'>
-                        Welcome back, Resume your Event Hunting Now!
+                        Please sign in or sign up below.
                     </div>
                 </div>
                 <div className='login-form'>
-                    <Form method=''>
+                    <form method='' className='form-content'>
                         <div className='email-content'>
                             <div>
                                 Email:
                             </div>
                             <div className='input-email'>
-                                <input type="email" placeholder='name@gmail.com' />
+                                <input type="email" placeholder='name@gmail.com' className='input-box' />
                             </div>
                         </div>
                         <div className='password-content'>
@@ -34,17 +27,13 @@ export default function LoginPage(){
                                 Password:
                             </div>
                             <div className="input-password">
-                                <input type='password' placeholder='Password'/>
+                                <input type='password' placeholder='Password' className='input-box' />
                             </div>
                         </div>
-                        
-                        <button type='submit'>
+                        <button type='submit' className='submit-button'>
                             <div className='btn-text'>Login</div>
                         </button>
-                    </Form>
-                </div>
-                <div>
-                    <SupabaseLoader />
+                    </form>
                 </div>
             </div>
         </div>

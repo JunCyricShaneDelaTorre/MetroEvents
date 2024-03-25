@@ -10,6 +10,14 @@ import LoginPage from './pages/PublicPage/LoginPage';
 import EventBrowserPage from './pages/PublicPage/EventBrowserPage';
 import SignUpPage from './pages/PublicPage/SignUpPage';
 import LandingPageContent from './pages/PublicPage/LandingPageContent';
+import Header from './components/Header';
+import Dashboard from './pages/Authenticated/Dashboard';
+import OrganizerDashboard from './pages/Organizer/OrganizerDashboard';
+import ProfilePage from './pages/Authenticated/ProfilePage';
+import EventCreationPage from './pages/Authenticated/EventCreationPage';
+import Footer from './components/Footer';
+
+
 
 
 const router = createBrowserRouter([
@@ -36,6 +44,41 @@ const router = createBrowserRouter([
       },
     ],
   },
+  {
+    path: 'Home',
+    element: <Header />,
+    errorElement:<ErrorPage />,
+    children: [
+      {
+        path:'',
+        element: <Dashboard />,
+      },
+      {
+        path: 'OrganizeEvents',
+        element: <OrganizerDashboard />
+
+      },
+      {
+        path:'BrowseEvents',
+        element:<EventBrowserPage />,
+      },
+      {
+        path:'Profile',
+        element:<ProfilePage />
+      }
+    ]
+  },
+  //test rani na route to see the contents
+  {
+    path:'CreateEvent',
+    element: <EventCreationPage />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path:'footer',
+    element: <Footer />,
+    errorElement: <ErrorPage />,
+  }
  
   
 ]);

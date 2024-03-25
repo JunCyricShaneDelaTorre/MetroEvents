@@ -22,3 +22,41 @@
 .phonenumber-content{
     margin-bottom: 20px;
 }
+
+.welcome-text{
+    width: 944px;
+    color: #402A04;
+    font-size: 30px;
+    font-family: 'Google Sans';
+    font-weight: 700;
+    text-align: left;
+}
+
+.input-box {
+    width: 300px; /* Adjust width as needed */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(90deg, rgba(210, 188, 126, 0.64) 0%, #C7D299 43%, #C9B500 100%);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    opacity: 0.9; /* Example hover effect */
+}
+
+  
+
+  
+ 
+  

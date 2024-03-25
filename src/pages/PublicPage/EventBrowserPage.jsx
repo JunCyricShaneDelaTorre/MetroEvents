@@ -1,14 +1,25 @@
 import * as React from 'react';
 import './PublicPageCss/EventBrowserPage.css'
+// import { Link } from 'react-router-dom';
+import Plus from './Plus.png';
+
+
 
 
 export default function EventBrowserPage(){
+
+    const handlePlusButtonClick = () => {
+        // Add your logic here to handle the button click
+        console.log('Plus button clicked');
+        alert('Login first to join event!')
+    };
+
     return(
         <div className='eventBrowser-wrapper'>
             <div className='eventBrowser-container'>
 
                 <div className='welcome-text'>
-                    <h1>Explore Events Here!</h1>
+                    <h1>Explore Events Here</h1>
                 </div>
                 <div className='event-secondary-text'>
                     Explore events here, we feature new events weekly for you to explore!
@@ -20,8 +31,141 @@ export default function EventBrowserPage(){
                         </h2>
                     </div>
                     <div className='event-container'>
-                        <div className="event-item">event 1</div>
-                        <div className="event-item">event 2</div>
+                        <div className="event-item">
+                            <div className='event-title'>
+                                InnovateCon
+                            </div>
+                            <img
+                                src={Plus}
+                                alt="plus sign"
+                                className="plus-sign"
+                                onClick={handlePlusButtonClick}
+                            />
+                        </div>
+                        <div className="event-item">
+                            <div className='event-title'>
+                                InnovateCon
+                            </div>
+                            <img
+                                src={Plus}
+                                alt="plus sign"
+                                className="plus-sign"
+                                onClick={handlePlusButtonClick}
+                            />
+                        </div>
+                        <div className="event-item">
+                            <div className='event-title'>
+                                InnovateCon
+                            </div>
+                        </div>
+                        <div className="event-item">
+                            <div className='event-title'>
+                                InnovateCon
+                            </div>
+                            <img
+                                src={Plus}
+                                alt="plus sign"
+                                className="plus-sign"
+                                onClick={handlePlusButtonClick}
+                            />
+                        </div>
+                        <div className="event-item">
+                            <div className='event-title'>
+                                InnovateCon
+                            </div>
+                            <img
+                                src={Plus}
+                                alt="plus sign"
+                                className="plus-sign"
+                                onClick={handlePlusButtonClick}
+                            />
+                        </div>
+                        <div className="event-item">
+                            <div className='event-title'>
+                                InnovateCon
+                            </div>
+                            <img
+                                src={Plus}
+                                alt="plus sign"
+                                className="plus-sign"
+                                onClick={handlePlusButtonClick}
+                            />
+                        </div>
+                        <div className="event-item">
+                            <div className='event-title'>
+                                InnovateCon
+                            </div>
+                            <img
+                                src={Plus}
+                                alt="plus sign"
+                                className="plus-sign"
+                                onClick={handlePlusButtonClick}
+                            />
+                        </div>
+                        <div className="event-item">
+                            <div className='event-title'>
+                                InnovateCon
+                            </div>
+                            <img
+                                src={Plus}
+                                alt="plus sign"
+                                className="plus-sign"
+                                onClick={handlePlusButtonClick}
+                            />
+                        </div>
+                        <div className="event-item">
+                            <div className='event-title'>
+                                InnovateCon
+                            </div>
+                            <img
+                                src={Plus}
+                                alt="plus sign"
+                                className="plus-sign"
+                                onClick={handlePlusButtonClick}
+                            />
+                        </div><div className="event-item">
+                            <div className='event-title'>
+                                InnovateCon
+                            </div>
+                            <img
+                                src={Plus}
+                                alt="plus sign"
+                                className="plus-sign"
+                                onClick={handlePlusButtonClick}
+                            />
+                        </div><div className="event-item">
+                            <div className='event-title'>
+                                InnovateCon
+                            </div>
+                            <img
+                                src={Plus}
+                                alt="plus sign"
+                                className="plus-sign"
+                                onClick={handlePlusButtonClick}
+                            />
+                        </div><div className="event-item">
+                            <div className='event-title'>
+                                InnovateCon
+                            </div>
+                            <img
+                                src={Plus}
+                                alt="plus sign"
+                                className="plus-sign"
+                                onClick={handlePlusButtonClick}
+                            />
+                        </div><div className="event-item">
+                            <div className='event-title'>
+                                InnovateCon
+                            </div>
+                            <img
+                                src={Plus}
+                                alt="plus sign"
+                                className="plus-sign"
+                                onClick={handlePlusButtonClick}
+                            />
+                        </div>
+
+                        {/* <div className="event-item">event 2</div>
                         <div className="event-item">event 3</div>
                         <div className="event-item">event 4</div>
                         <div className="event-item">event 5</div>
@@ -49,7 +193,7 @@ export default function EventBrowserPage(){
                         <div className="event-item">event 27</div>
                         <div className="event-item">event 28</div>
                         <div className="event-item">event 29</div>
-                        <div className="event-item">event 30</div>
+                        <div className="event-item">event 30</div> */}
                     </div>
                 </div>
 
