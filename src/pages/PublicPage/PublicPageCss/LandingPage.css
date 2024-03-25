@@ -12,13 +12,27 @@
     display: flex;
 }
 
+.navtext {
+    font-weight: 500;
+    text-align: left;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Google Sans';
+    font-weight: 700;
+    color: white;
+
+}
 
 .loginsignup-link{
     margin-left: auto;
+    
 }
 
 .Logo,.Login,.SignUp{
     text-decoration: none;
+    color: #EBC351;
+
 }
 
 .Login{
@@ -28,3 +42,83 @@
 .SignUp{
     margin-right: 20px;
 }
+
+.container {
+    width: auto;
+    height: auto;
+    padding-bottom: 198px;
+    padding-right: 738px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  
+  
+  .logo-container {
+    width: 202px;
+    height: 46px;
+    position: relative;
+  }
+  
+  .logo-text {
+    width: 154px;
+    height: 45px;
+    position: absolute;
+    color: #EBC351;
+    font-size: 40px;
+    font-family: 'Google Sans';
+    font-weight: 700;
+    word-wrap: break-word;
+  }
+  
+  .logo-img {
+    width: 48px;
+    height: 46px;
+    position: absolute;
+    left: 154px;
+    top: 0;
+  }
+  
+  .title {
+    width: 944px;
+    color: #402A04;
+    font-size: 64px;
+    font-family: 'Google Sans';
+    font-weight: 700;
+    text-align: left;
+  }
+  
+  .subtitle {
+    color: rgba(176, 112, 0, 0.58);
+    font-size: 32px;
+    font-family: 'Google Sans';
+    font-weight: 500;
+    text-align: left;
+  }
+  
+  .custom-button {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(210, 188, 126, 0.64) 0%, #C7D299 43%, #C9B500 100%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 23px;
+    border: none;
+    cursor: pointer;
+    font-family: 'Google Sans';
+    font-weight: 700;
+    font-size: 16px;
+    color: white;
+    text-transform: uppercase;
+    outline: none;
+  }
+  
+  .custom-button:hover {
+    opacity: 0.9; /* Example hover effect */
+  }
+  
+  .buttonc {
+    padding-top: 20px;
+  }

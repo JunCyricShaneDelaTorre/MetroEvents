@@ -1,15 +1,28 @@
 import * as React from 'react';
 import {Link} from 'react-router-dom';
 import './PublicPageCss/LandingPageContent.css';
+import Logo from './Logo.png';
+import PlantekwLogo from './PlantekwLogo.png';
+import CustomButton from './CustomButton'; 
 
 export default function LandingPageContent(){
+
+    const handleClick = () => {
+        // Handle button click event
+      };
+
+
     return(
-        <div className='landing-page'>
-            <div className='content-container'>
-                <h1>Welcome!</h1>
-                <Link to={'EventBrowser'} className='ViewEvent' >View Events Here!</Link>
+        
+            <div className='container2'>
+            <Link to={'/'} className='Plantek'><img src={PlantekwLogo} alt="Plantek" /></Link>
+            <div className='title'>Teknoys Unite! Plan the Perfect Event with PlanTek.</div>
+            <div className='subtitle'>Turn Event Planning from Stress to Success</div>
+            <div className='buttonc'>
+                <CustomButton onClick={handleClick}><Link to={'EventBrowser'} className='ViewEvent' >Explore Events</Link></CustomButton>
+                
             </div>
-    
         </div>
+    
     )
 }

@@ -1,3 +1,16 @@
 .ViewEvent{
     text-decoration: none;
 }
+
+.container2 {
+    width: auto;
+    height: auto;
+    padding-top: 100px;
+    padding-bottom: 198px;
+    padding-right: 738px;
+    padding-left: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    gap: 12px;
+  }

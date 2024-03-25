@@ -73,7 +73,12 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <div className='App'>
+    <div className='App' style={{
+      background: 'linear-gradient(to bottom, #F2F2F2, #FFFDD9)',
+      /* Other styles for your element */
+      width: '100%',
+      height: '100vh', // Adjust height as needed
+    }}>
       <RouterProvider router={router}/>
     </div>
   );
