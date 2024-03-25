@@ -1,204 +1,51 @@
 import * as React from 'react';
-import './PublicPageCss/EventBrowserPage.css'
-// import { Link } from 'react-router-dom';
+import './PublicPageCss/EventBrowserPage.css';
 import Plus from './Plus.png';
 
-
-
-
-export default function EventBrowserPage(){
-
+export default function EventBrowserPage() {
     const handlePlusButtonClick = () => {
-        // Add your logic here to handle the button click
         console.log('Plus button clicked');
-        alert('Login first to join event!')
+        alert('Login first to join event!');
     };
 
-    return(
+    return (
         <div className='eventBrowser-wrapper'>
             <div className='eventBrowser-container'>
-
                 <div className='welcome-text'>
                     <h1>Explore Events Here</h1>
                 </div>
-                <div className='event-secondary-text'>
-                    Explore events here, we feature new events weekly for you to explore!
-                </div>
                 <div className='eventBrowser-content'>
                     <div className='content-header'>
-                        <h2>
-                            Featured events for this week
-                        </h2>
+                        <h2>Featured events for this week</h2>
                     </div>
                     <div className='event-container'>
-                        <div className="event-item">
-                            <div className='event-title'>
-                                InnovateCon
+                        {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((event, index) => (
+                            <div className="event-item" key={index}>
+                                <div className='event-detail'>
+                                    <div className='event-title1'>InnovateCon</div>
+                                    <div className='event-details-container'>
+                                        <div className='date-texts'>
+                                            <strong>Start Date:</strong> March 28, 2024
+                                        </div>
+                                        <div className='date-texts'>
+                                            <strong>End Date:</strong> March 30, 2024
+                                        </div>
+                                        <div className='event-description'>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae velit sit amet lectus fermentum interdum.
+                                        </div>
+                                    </div>
+                                </div>
+                                <img
+                                    src={Plus}
+                                    alt="plus sign"
+                                    className="plus-sign"
+                                    onClick={handlePlusButtonClick}
+                                />
                             </div>
-                            <img
-                                src={Plus}
-                                alt="plus sign"
-                                className="plus-sign"
-                                onClick={handlePlusButtonClick}
-                            />
-                        </div>
-                        <div className="event-item">
-                            <div className='event-title'>
-                                InnovateCon
-                            </div>
-                            <img
-                                src={Plus}
-                                alt="plus sign"
-                                className="plus-sign"
-                                onClick={handlePlusButtonClick}
-                            />
-                        </div>
-                        <div className="event-item">
-                            <div className='event-title'>
-                                InnovateCon
-                            </div>
-                        </div>
-                        <div className="event-item">
-                            <div className='event-title'>
-                                InnovateCon
-                            </div>
-                            <img
-                                src={Plus}
-                                alt="plus sign"
-                                className="plus-sign"
-                                onClick={handlePlusButtonClick}
-                            />
-                        </div>
-                        <div className="event-item">
-                            <div className='event-title'>
-                                InnovateCon
-                            </div>
-                            <img
-                                src={Plus}
-                                alt="plus sign"
-                                className="plus-sign"
-                                onClick={handlePlusButtonClick}
-                            />
-                        </div>
-                        <div className="event-item">
-                            <div className='event-title'>
-                                InnovateCon
-                            </div>
-                            <img
-                                src={Plus}
-                                alt="plus sign"
-                                className="plus-sign"
-                                onClick={handlePlusButtonClick}
-                            />
-                        </div>
-                        <div className="event-item">
-                            <div className='event-title'>
-                                InnovateCon
-                            </div>
-                            <img
-                                src={Plus}
-                                alt="plus sign"
-                                className="plus-sign"
-                                onClick={handlePlusButtonClick}
-                            />
-                        </div>
-                        <div className="event-item">
-                            <div className='event-title'>
-                                InnovateCon
-                            </div>
-                            <img
-                                src={Plus}
-                                alt="plus sign"
-                                className="plus-sign"
-                                onClick={handlePlusButtonClick}
-                            />
-                        </div>
-                        <div className="event-item">
-                            <div className='event-title'>
-                                InnovateCon
-                            </div>
-                            <img
-                                src={Plus}
-                                alt="plus sign"
-                                className="plus-sign"
-                                onClick={handlePlusButtonClick}
-                            />
-                        </div><div className="event-item">
-                            <div className='event-title'>
-                                InnovateCon
-                            </div>
-                            <img
-                                src={Plus}
-                                alt="plus sign"
-                                className="plus-sign"
-                                onClick={handlePlusButtonClick}
-                            />
-                        </div><div className="event-item">
-                            <div className='event-title'>
-                                InnovateCon
-                            </div>
-                            <img
-                                src={Plus}
-                                alt="plus sign"
-                                className="plus-sign"
-                                onClick={handlePlusButtonClick}
-                            />
-                        </div><div className="event-item">
-                            <div className='event-title'>
-                                InnovateCon
-                            </div>
-                            <img
-                                src={Plus}
-                                alt="plus sign"
-                                className="plus-sign"
-                                onClick={handlePlusButtonClick}
-                            />
-                        </div><div className="event-item">
-                            <div className='event-title'>
-                                InnovateCon
-                            </div>
-                            <img
-                                src={Plus}
-                                alt="plus sign"
-                                className="plus-sign"
-                                onClick={handlePlusButtonClick}
-                            />
-                        </div>
-
-                        {/* <div className="event-item">event 2</div>
-                        <div className="event-item">event 3</div>
-                        <div className="event-item">event 4</div>
-                        <div className="event-item">event 5</div>
-                        <div className="event-item">event 6</div>
-                        <div className="event-item">event 7</div>
-                        <div className="event-item">event 8</div>
-                        <div className="event-item">event 9</div>
-                        <div className="event-item">event 10</div>
-                        <div className="event-item">event 11</div>
-                        <div className="event-item">event 12</div>
-                        <div className="event-item">event 13</div>
-                        <div className="event-item">event 14</div>
-                        <div className="event-item">event 15</div>
-                        <div className="event-item">event 16</div>
-                        <div className="event-item">event 17</div>
-                        <div className="event-item">event 18</div>
-                        <div className="event-item">event 19</div>
-                        <div className="event-item">event 20</div>
-                        <div className="event-item">event 21</div>
-                        <div className="event-item">event 22</div>
-                        <div className="event-item">event 23</div>
-                        <div className="event-item">event 24</div>
-                        <div className="event-item">event 25</div>
-                        <div className="event-item">event 26</div>
-                        <div className="event-item">event 27</div>
-                        <div className="event-item">event 28</div>
-                        <div className="event-item">event 29</div>
-                        <div className="event-item">event 30</div> */}
+                        ))}
                     </div>
                 </div>
-
-            </div>            
+            </div>
         </div>
-        
-    )
+    );
 }

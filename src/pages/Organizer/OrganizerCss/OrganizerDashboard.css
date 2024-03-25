@@ -1,0 +1,25 @@
+.organizer-page-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.organizer-page-container {
+    width: 100%;
+    max-width: 900px; /* Adjust as needed */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.organizer-page-header-container {
+    text-align: center;
+}
+
+.organizer-page-header-text {
+    color: #EBC351;
+    font-size: 16px;
+    font-family: 'Google Sans';
+    font-weight: 400;
+    word-wrap: break-word;
+}

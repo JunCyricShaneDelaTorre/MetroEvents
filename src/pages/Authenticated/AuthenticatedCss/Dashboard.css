@@ -1,11 +1,9 @@
-.dashboard-wrapper{
+.dashboard-wrapper {
     display: flex;
     justify-content: center;
-    margin-top: 30px;
 }
 
-
-.dashboard-welcome-text h1{
+.dashboard-welcome-text h1 {
     padding-top: 40px;
     padding-left: 10px;
     padding-right: 10px;
@@ -13,20 +11,17 @@
     margin-bottom: 0px;
 }
 
-
-
-.dashboard-content{
+.dashboard-content {
     padding-left: 30px;
     padding-right: 30px;
     padding-top: 40px;
     padding-bottom: 300px;
-    
 }
 
 .dashboard-item-container {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Align items in the center horizontally */
+    align-items: center; 
     gap: 1.5rem;
     text-align: justify;
     width: 900px;
@@ -39,30 +34,51 @@
     padding-right: 10px;
 }
 
-
 .event-item-home {
     display: flex;
+    flex-direction: column;
     background-color: rgba(144, 93, 3, 0.99);
-    border-radius: 15px; /* Set border radius to create rounded corners */
-    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1); /* Add box shadow for a cool effect */
+    border-radius: 15px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1);
     padding: 40px;
     width: 500px;
-    height: 80px;
     position: relative;
-    transition: transform 0.3s ease; /* Add smooth transition effect */
+    transition: transform 0.3s ease;
 }
 
 .event-item-home:hover {
-    transform: scale(1.10); /* Scale the event item on hover */
+    transform: scale(1.10);
 }
 
-.event-title{
-    width: 500px;
+.event-details {
     color: #ffffff;
-    font-size: 15px;
     font-family: 'Google Sans';
     font-weight: 700;
     text-align: left;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
+.date-texts {
+    color: #ffffff;
+    font-family: 'Google Sans';
+    font-weight: 100;
+    text-align: left;
+    padding-top: 10px;
+}
+
+.event-description {
+    color: #ffffff;
+    font-family: 'Google Sans';
+    font-weight: 100;
+    text-align: left;
+    padding-top: 10px;
+}
+
+.delete-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
