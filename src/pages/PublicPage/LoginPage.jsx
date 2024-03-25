@@ -1,11 +1,9 @@
-import * as React from 'react';
-import {Form} from 'react-router-dom';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import './PublicPageCss/LoginPage.css';
 
-
-export default function LoginPage(){
-    
-    return(
+export default function LoginPage() {
+    return (
         <div className='login-wrapper'>
             <div className='login-container'>
                 <div className='welcome-section'>
@@ -15,13 +13,13 @@ export default function LoginPage(){
                     </div>
                 </div>
                 <div className='login-form'>
-                    <Form method=''>
+                    <form method='' className='form-content'>
                         <div className='email-content'>
                             <div>
                                 Email:
                             </div>
                             <div className='input-email'>
-                                <input type="email" placeholder='name@gmail.com' />
+                                <input type="email" placeholder='name@gmail.com' className='input-box' />
                             </div>
                         </div>
                         <div className='password-content'>
@@ -29,14 +27,13 @@ export default function LoginPage(){
                                 Password:
                             </div>
                             <div className="input-password">
-                                <input type='password' placeholder='Password'/>
+                                <input type='password' placeholder='Password' className='input-box' />
                             </div>
                         </div>
-                        
-                        <button type='submit' >
+                        <button type='submit' className='submit-button'>
                             <div className='btn-text'>Login</div>
                         </button>
-                    </Form>
+                    </form>
                 </div>
             </div>
         </div>
