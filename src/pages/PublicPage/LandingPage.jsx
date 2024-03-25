@@ -13,8 +13,10 @@ export default function LandingPage() {
             <Link to={'/'} className='Logo'><img src={Logo} alt="Logo" /></Link>
           </div>
           <div className='login-signup'>
+          <div className='navtext'>
             <Link to={'Login'} className='Login' >Login</Link>
             <Link to={'SignUp'} className='SignUp' >Sign Up</Link>
+            </div>
           </div>
         </div>
       </div>
