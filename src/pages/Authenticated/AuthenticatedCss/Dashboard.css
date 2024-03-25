@@ -1,6 +1,8 @@
 .dashboard-wrapper{
     display: flex;
     justify-content: center;
+    margin-top: 30px;
+
 
 }
 
@@ -16,9 +18,10 @@
 
 
 .dashboard-content{
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 40px;
+    padding-bottom: 300px;
     
 }
 
