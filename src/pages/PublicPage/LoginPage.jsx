@@ -3,12 +3,49 @@ import * as React from 'react';
 import {Form} from 'react-router-dom';
 import './PublicPageCss/LoginPage.css';
 import supabase from '../../config/supabaseClient';
+import { useState } from 'react'
 
-const SupabaseLoader = () => {
+const SupabaseLoader = () => { // just to check if supabase succeeds in connecting
     console.log(supabase);
-    return null; // or you can return some JSX if needed
+    return null; 
 };
-export default function LoginPage(){
+
+export default function LoginPage( {} ){
+    const [formData,setFormData] = useState({
+        email:'',password:''
+  })
+
+  console.log(formData)
+
+  function handleChange(event){
+    setFormData((prevFormData)=>{
+      return{
+        ...prevFormData,
+        [event.target.name]:event.target.value
+      }
+
+    })
+
+  }
+
+  async function handleSubmit(e){
+    e.preventDefault()
+
+    try {
+    const { data, error } = await supabase.auth.signInWithPassword({
+        email: formData.email,
+        password: formData.password,
+      })
+
+    if (error) throw error
+    console.log(data)
+    // handle move to homepage session
+
+    } catch (error) {
+      alert(error)
+    }
+  }
+
     return(
         
         <div className='login-wrapper'>
@@ -20,13 +57,17 @@ export default function LoginPage(){
                     </div>
                 </div>
                 <div className='login-form'>
-                    <Form method=''>
+                    <Form method='' onSubmit={handleSubmit}>
                         <div className='email-content'>
                             <div>
                                 Email:
                             </div>
                             <div className='input-email'>
-                                <input type="email" placeholder='name@gmail.com' />
+                                <input 
+                                name='email'
+                                type="email" 
+                                placeholder='name@gmail.com' 
+                                onChange={handleChange}/>
                             </div>
                         </div>
                         <div className='password-content'>
@@ -34,7 +75,11 @@ export default function LoginPage(){
                                 Password:
                             </div>
                             <div className="input-password">
-                                <input type='password' placeholder='Password'/>
+                                <input 
+                                name='password'
+                                type='password' 
+                                placeholder='Password'
+                                onChange={handleChange}/>
                             </div>
                         </div>
                         
@@ -44,7 +89,7 @@ export default function LoginPage(){
                     </Form>
                 </div>
                 <div>
-                    <SupabaseLoader />
+                    
                 </div>
             </div>
         </div>
