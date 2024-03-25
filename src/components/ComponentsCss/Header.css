@@ -19,8 +19,8 @@
 
 .right-container{
     display: flex;
-    gap: 1.5rem;
-    
+    gap: 2rem;
+    padding-right: 15px;
 }
 
 .navbar{

@@ -5,6 +5,8 @@ import Logo from './Logo.png';
 import Events from './Events.png';
 import Create from './Create.png';
 import Explore from './Explore.png';
+import Notification from './Notification.png';
+import Account from './Account.png';
 
 
 export default function Header() {
@@ -36,10 +38,12 @@ export default function Header() {
 
                         <div className='right-container'>
                             <div className='nav'>
-                                <Link to={'BrowseEvents'} className='Explore'><img src={Explore} alt="" /></Link>
+                                <Link to={'Notifications'} className='Notification'><img src={Notification} alt="" /></Link>
                             </div>
-                            <div>notif</div>
-                            <Link to={'Profile'} className='nav-links'>Profile</Link>
+                            
+                            
+                            {/* <div>notif</div> */}
+                            {/* <Link to={'Profile'} className='nav-links'>Profile</Link> */}
                         </div>
                     </div>
                 </nav>
