@@ -9,9 +9,9 @@ export default function LoginPage(){
         <div className='login-wrapper'>
             <div className='login-container'>
                 <div className='welcome-section'>
-                    <h1 className='welcome-text'>Welcome to mecobaby143</h1>
+                    <h1 className='welcome-text'>Welcome to PlanTek</h1>
                     <div className='secondary-text'>
-                        Welcome back, Resume your Event Hunting Now!
+                        Please sign in or sign up below.
                     </div>
                 </div>
                 <div className='login-form'>
