@@ -82,7 +82,6 @@ const router = createBrowserRouter([
   element: <div><AdminHeader/> <AdminDashboard /> </div>,
   errorElement: <ErrorPage />
  },
-=======
   //test rani na route to see the contents
   {
     path:'CreateEvent',
@@ -105,7 +104,7 @@ function App() {
       background: 'linear-gradient(to bottom, #F2F2F2, #FFFDD9)',
       /* Other styles for your element */
       width: '100%',
-      height: '', // Adjust height as needed
+      height: '100%', // Adjust height as needed
     }}>
       <RouterProvider router={router}/>
     </div>
