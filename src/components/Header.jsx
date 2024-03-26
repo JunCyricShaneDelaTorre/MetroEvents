@@ -6,7 +6,7 @@ import Events from './Events.png';
 import Create from './Create.png';
 import Explore from './Explore.png';
 import Notification from './Notification.png';
-import Account from './Account.png';
+import Signout from './Signout.png';
 
 
 export default function Header() {
@@ -39,6 +39,9 @@ export default function Header() {
                         <div className='right-container'>
                             <div className='nav'>
                                 <Link to={'Notifications'} className='Notification'><img src={Notification} alt="" /></Link>
+                            </div>
+                            <div className='nav'>
+                                <Link to={'/'} className='Signout'><img src={Signout} alt="" /></Link>
                             </div>
                             
                             
