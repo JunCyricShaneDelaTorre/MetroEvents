@@ -1,0 +1,24 @@
+.footer-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-content-left{
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-left-contents{
+    display: flex;
+    gap: .8rem;
+}
+
+.footer-content-right{
+    display: flex;
+    gap: .8rem;
+}
+
+.links{
+    text-decoration: none;
+}

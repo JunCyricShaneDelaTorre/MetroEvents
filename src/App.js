@@ -17,6 +17,8 @@ import ProfilePage from './pages/Authenticated/ProfilePage';
 import AdminDashboard from './pages/Administrator/AdminDashboard';
 import AdminLogin from './pages/Administrator/AdminLogin';
 import AdminHeader from './pages/Administrator/AdminHeader';
+import EventCreationPage from './pages/Authenticated/EventCreationPage';
+import Footer from './components/Footer';
 
 
 
@@ -80,6 +82,18 @@ const router = createBrowserRouter([
   element: <div><AdminHeader/> <AdminDashboard /> </div>,
   errorElement: <ErrorPage />
  },
+=======
+  //test rani na route to see the contents
+  {
+    path:'CreateEvent',
+    element: <EventCreationPage />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path:'footer',
+    element: <Footer />,
+    errorElement: <ErrorPage />,
+  }
  
   
 ]);
