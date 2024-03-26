@@ -1,11 +1,25 @@
 import * as React from 'react';
 import './PublicPageCss/EventBrowserPage.css'
 // import { Link } from 'react-router-dom';
-
+import axios from 'axios';
+import { useState, useEffect } from 'react'; 
 
 
 
 export default function EventBrowserPage(){
+    const [events, setEvents] = useState([]);
+
+    useEffect(() => {
+        // Fetch events from the API
+        axios.get('http://127.0.0.1:8000/sample/api/public_events/')
+            .then(response => {
+                // Update the state with the fetched events
+                setEvents(response.data);
+            })
+            .catch(error => {
+                console.error('Error fetching events:', error);
+            });
+    }, []);
 
     return(
         <div className='eventBrowser-wrapper'>
@@ -24,7 +38,7 @@ export default function EventBrowserPage(){
                         </h2>
                     </div>
                     <div className='event-container'>
-                        <div className="event-item">event 1</div>
+                        {/* <div className="event-item">event 1</div>
                         <div className="event-item">event 2</div>
                         <div className="event-item">event 3</div>
                         <div className="event-item">event 4</div>
@@ -53,7 +67,16 @@ export default function EventBrowserPage(){
                         <div className="event-item">event 27</div>
                         <div className="event-item">event 28</div>
                         <div className="event-item">event 29</div>
-                        <div className="event-item">event 30</div>
+                        <div className="event-item">event 30</div> */}
+                        {/* Use .map function to render each event */}
+                        {events.map(event => (
+                            <div key={event.EventID} className='event'>
+                                <h3>{event.EventName}</h3>
+                                <p>{event.EventDescription}</p>
+                                <p>Date: {event.EventDate}</p>
+                                <p>Location: {event.EventLocation}</p>
+                            </div>
+                        ))}
                     </div>
                 </div>
 
