@@ -104,7 +104,7 @@ function App() {
       background: 'linear-gradient(to bottom, #F2F2F2, #FFFDD9)',
       /* Other styles for your element */
       width: '100%',
-      height: '100%', // Adjust height as needed
+      height: '100vh', // Adjust height as needed
     }}>
       <RouterProvider router={router}/>
     </div>
