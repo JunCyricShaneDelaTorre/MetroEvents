@@ -1,5 +1,5 @@
 .eventBrowser-wrapper{
-    display: flex;
+    display: flex;  
     justify-content: center;
 
 }
@@ -23,6 +23,7 @@
 .eventBrowser-content{
     padding-left: 5 px;
     padding-right: 5px;
+    height: 170px;
     
 }
 
@@ -35,7 +36,7 @@
     scrollbar-width: none;
     text-align: justify;
     width: 900px;
-    height: 400px;
+    height: 600px;
     justify-content: space-around;   
     margin: auto;
     padding-top: 10px;

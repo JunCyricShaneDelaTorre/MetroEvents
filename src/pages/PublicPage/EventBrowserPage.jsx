@@ -19,7 +19,7 @@ export default function EventBrowserPage() {
                         <h2>Featured events for this week</h2>
                     </div>
                     <div className='event-container'>
-                        {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((event, index) => (
+                        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15].map((event, index) => (
                             <div className="event-item" key={index}>
                                 <div className='event-detail'>
                                     <div className='event-title1'>InnovateCon</div>

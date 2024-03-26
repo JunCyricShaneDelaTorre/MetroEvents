@@ -14,6 +14,10 @@
 
 .organizer-page-header-container {
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
 }
 
 .organizer-page-header-text {
@@ -22,4 +26,5 @@
     font-family: 'Google Sans';
     font-weight: 400;
     word-wrap: break-word;
+    
 }

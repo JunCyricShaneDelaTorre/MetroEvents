@@ -1,7 +1,6 @@
 import * as React from 'react';
 import {Link} from 'react-router-dom';
 import './PublicPageCss/LandingPageContent.css';
-import Logo from './Logo.png';
 import PlantekwLogo from './PlantekwLogo.png';
 import CustomButton from './CustomButton'; 
 

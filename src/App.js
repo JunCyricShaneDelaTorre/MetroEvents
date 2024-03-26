@@ -54,16 +54,16 @@ const router = createBrowserRouter([
     children: [
       {
         path:'',
-        element: <Dashboard />,
+        element: <div><Dashboard /> <Footer /></div>,
       },
       {
         path: 'OrganizeEvents',
-        element: <OrganizerDashboard />
+        element: <div><OrganizerDashboard /> <Footer /></div>
 
       },
       {
         path:'BrowseEvents',
-        element:<EventBrowserPage />,
+        element:<div><EventBrowserPage /> <Footer /></div>,
       },
       {
         path:'Profile',

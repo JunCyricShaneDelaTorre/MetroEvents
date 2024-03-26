@@ -1,24 +1,29 @@
-.footer-container{
+.footer-container {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 40px 0; /* Adjust padding as needed */
+    border-top: 1px solid #EBC351;
 }
 
-.footer-content-left{
+.footer-content-left {
     display: flex;
     gap: 2rem;
 }
 
-.footer-left-contents{
+.footer-left-contents {
     display: flex;
-    gap: .8rem;
+    gap: 0.8rem;
 }
 
-.footer-content-right{
+.footer-content-right {
     display: flex;
-    gap: .8rem;
+    gap: 0.8rem;
 }
 
-.links{
+.links {
     text-decoration: none;
 }
