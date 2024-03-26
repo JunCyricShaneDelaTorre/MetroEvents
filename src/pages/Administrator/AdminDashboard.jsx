@@ -5,9 +5,9 @@ export default function AdminDashboard(){
     return(
         <div className='admin-dashboard-wrapper'>
             <div className='admin-dashboard-container'>
-                    <div className='admin-dashboard-header'>
-                        <h2>Requests</h2>
-                    </div>
+                    <div className='welcome-text'>
+                            <h1>Requests</h1>
+                    </div>  
                     <div className='admin-dashboard-content'>
                         <div className='name-status-action'>
                             <div className='name-container'>

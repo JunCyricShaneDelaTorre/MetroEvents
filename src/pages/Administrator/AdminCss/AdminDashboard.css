@@ -1,13 +1,24 @@
 .admin-dashboard-wrapper{
     padding-top: 20px;
-    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
     
 }
 .admin-dashboard-container{
     display: flex;
     flex-direction: column;
+    
 }
 
+
+.organizer-page-container {
+    width: 100%;
+    max-width: 900px; /* Adjust as needed */
+    padding: 20px;
+    box-sizing: border-box;
+}
 .admin-dashboard-header{
     display: flex;
     justify-content: center;
@@ -26,13 +37,15 @@
 }
 
 .test-requests{
-    margin-left: 300px;
-    margin-right: 300px;
+    margin-left: 190px;
+    margin-right: 190px;
     display: grid;
     gap: .1rem;
+    
 }
 
 .test-item{
     border: 2px solid black;
     border-radius: 3px;
 }
+
