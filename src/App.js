@@ -14,6 +14,11 @@ import Header from './components/Header';
 import Dashboard from './pages/Authenticated/Dashboard';
 import OrganizerDashboard from './pages/Organizer/OrganizerDashboard';
 import ProfilePage from './pages/Authenticated/ProfilePage';
+import AdminDashboard from './pages/Administrator/AdminDashboard';
+import AdminLogin from './pages/Administrator/AdminLogin';
+import AdminHeader from './pages/Administrator/AdminHeader';
+import EventCreationPage from './pages/Authenticated/EventCreationPage';
+import Footer from './components/Footer';
 
 
 
@@ -49,16 +54,16 @@ const router = createBrowserRouter([
     children: [
       {
         path:'',
-        element: <Dashboard />,
+        element: <div><Dashboard /> <Footer /></div>,
       },
       {
         path: 'OrganizeEvents',
-        element: <OrganizerDashboard />
+        element: <div><OrganizerDashboard /> <Footer /></div>
 
       },
       {
         path:'BrowseEvents',
-        element:<EventBrowserPage />,
+        element:<div><EventBrowserPage /> <Footer /></div>,
       },
       {
         path:'Profile',
@@ -66,6 +71,28 @@ const router = createBrowserRouter([
       }
     ]
   },
+  {
+    path: 'admin',
+    element: <AdminLogin />,
+    errorElement: <ErrorPage />,
+    
+  },
+ {
+  path: 'AdminDashboard',
+  element: <div><AdminHeader/> <AdminDashboard /> </div>,
+  errorElement: <ErrorPage />
+ },
+  //test rani na route to see the contents
+  {
+    path:'CreateEvent',
+    element: <EventCreationPage />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path:'footer',
+    element: <Footer />,
+    errorElement: <ErrorPage />,
+  }
  
   
 ]);

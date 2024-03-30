@@ -10,11 +10,12 @@ export default function EventBrowserPage(){
     const [events, setEvents] = useState([]);
 
     useEffect(() => {
-        // Fetch events from the API
+        // Fetch events from the backend API
         axios.get('http://127.0.0.1:8000/sample/api/public_events/')
             .then(response => {
-                // Update the state with the fetched events
+                // Set the events state with the fetched events
                 setEvents(response.data);
+                console.log(events)
             })
             .catch(error => {
                 console.error('Error fetching events:', error);
@@ -68,13 +69,14 @@ export default function EventBrowserPage(){
                         <div className="event-item">event 28</div>
                         <div className="event-item">event 29</div>
                         <div className="event-item">event 30</div> */}
-                        {/* Use .map function to render each event */}
                         {events.map(event => (
-                            <div key={event.EventID} className='event'>
-                                <h3>{event.EventName}</h3>
-                                <p>{event.EventDescription}</p>
-                                <p>Date: {event.EventDate}</p>
-                                <p>Location: {event.EventLocation}</p>
+                            <div className="event-item" key={event.pk}>
+                                {/* Render event details */}
+                                <h3>{event.fields.EventName}</h3>
+                                <p>Type: {event.fields.EventType}</p>
+                                <p>Date: {event.fields.EventDate}</p>
+                                <p>Description: {event.fields.EventDescription}</p>
+                                {/* You can add more details as needed */}
                             </div>
                         ))}
                     </div>

@@ -1,3 +1,31 @@
+.admin-nav-bar{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.admin-nav-links{
+    text-decoration: none;
+}
+
+.admin-center-and-right{
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+}
+
+.admin-center-container{
+    display: flex;
+    gap: 2rem;
+    
+}
+
+.admin-right-container{
+    display: flex;
+    gap: 1.5rem;
+    
+}
+
 .nav-links{
     text-decoration: none;
 }

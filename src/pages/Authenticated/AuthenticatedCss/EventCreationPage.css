@@ -1,0 +1,108 @@
+.event-creation-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    padding: 20px; /* Added padding for spacing */
+}
+
+.event-creation-container {
+    display: flex;
+    width: 500px;
+    flex-direction: column; /* Align children vertically */
+    border: 5px solid transparent; /* Set border width and make it transparent */
+    border-radius: 20px; /* Set border radius to create rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow for a cool effect */
+    padding: 20px; /* Add some padding to make it look nicer */
+}
+
+.event-creation-image-container {
+    display: flex;
+    justify-content: center; /* Center image horizontally */
+    align-items: center; /* Center image vertically */
+    width: 100%;
+    margin-bottom: 5px; /* Added margin bottom for spacing */
+}
+
+.event-creation-details-container {
+    display: flex;
+    flex-direction: column; /* Align children vertically */
+    width: 100%;
+}
+
+.event-form-event-name,
+.event-form-event-start,
+.event-form-event-end {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px; /* Added margin bottom for spacing */
+}
+
+
+.event-form-event-start label,
+.event-form-event-end label {
+    margin-bottom: 5px; /* Added margin bottom for spacing */
+}
+
+.event-form-event-name input,
+.event-form-event-start input,
+.event-form-event-end input {
+    width: auto; /* Adjust width as needed */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.event-form-event-description input {
+    width: auto; 
+    height: 100px; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    font-size: 16px;
+    vertical-align: top; 
+}
+
+.event-form-event-description textarea {
+    width: 478px; 
+    height: 100px; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    font-size: 16px;
+    vertical-align: top; /* Align text to the top */
+    text-align: left;
+    resize: none; /* Disable resizing */
+}
+
+
+
+
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(90deg, rgba(210, 188, 126, 0.64) 0%, #C7D299 43%, #C9B500 100%);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9; /* Example hover effect */
+}
+
+.title1 {
+    width: auto;
+    color: #402A04;
+    font-size: 20px;
+    font-family: 'Google Sans';
+    font-weight: 200;
+    text-align: center;
+    margin-bottom: 20px;
+  }

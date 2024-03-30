@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link, Outlet } from 'react-router-dom';
-import './ComponentsCss/Header.css';
+import * as React from 'react';
+import {Link} from 'react-router-dom';
+import './AdminCss/AdminHeader.css';
 import Logo from './Logo.png';
 import Events from './Events.png';
 import Create from './Create.png';
@@ -8,9 +8,8 @@ import Explore from './Explore.png';
 import Notification from './Notification.png';
 import Signout from './Signout.png';
 
-
-export default function Header() {
-    return (
+export default function AdminHeader(){
+    return(
         <div className='nav-wrapper'>
             <div className='nav-container'> 
                 <nav className='navbar'>
@@ -51,7 +50,6 @@ export default function Header() {
                     </div>
                 </nav>
             </div>
-            <Outlet />
         </div>
     );
 }

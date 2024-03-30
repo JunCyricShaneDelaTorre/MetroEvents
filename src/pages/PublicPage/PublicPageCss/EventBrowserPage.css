@@ -1,31 +1,29 @@
 .eventBrowser-wrapper{
-    display: flex;
+    display: flex;  
     justify-content: center;
 
 }
 
 
-.welcome-text h1{
+.eventbrowser-welcome-text h1 {
     padding-top: 40px;
     padding-left: 10px;
     padding-right: 10px;
     margin-top: 20px;
-    margin-bottom: 0px;
-    
+    margin-bottom: 0;
 }
 
-.event-secondary-text{
+.event-secondary-text {
     padding-top: 8px;
     padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 20px;
-
-    
 }
 
 .eventBrowser-content{
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 5 px;
+    padding-right: 5px;
+    height: 170px;
     
 }
 
@@ -38,17 +36,24 @@
     scrollbar-width: none;
     text-align: justify;
     width: 900px;
-    height: 400px;
+    height: 600px;
     justify-content: space-around;   
+    margin: auto;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
-.event-item{
-    display: flex;
-    border: 1px solid black; /* Set border width and make it transparent */
-    border-radius: 10px; /* Set border radius to create rounded corners */
-    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1); /* Add box shadow for a cool effect */
-    padding: 80px;
-}
+
+/* 
+.event-item {
+    
+    background-color: rgba(144, 93, 3, 0.99);
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+} */
 
 .ViewEvent{
     font-family: 'Google Sans';
@@ -58,3 +63,100 @@
     text-transform: uppercase
 }
 
+.event-item {
+    display: flex;
+    background-color: rgba(144, 93, 3, 0.99);
+    border-radius: 15px; /* Set border radius to create rounded corners */
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1); /* Add box shadow for a cool effect */
+    padding: 40px;
+    width: 160px;
+    height: 80px;
+    position: relative;
+    transition: transform 0.3s ease; /* Add smooth transition effect */
+}
+
+.event-item:hover {
+    transform: scale(1.1); /* Scale the event item on hover */
+}
+
+.event-details {
+    margin-top: auto;
+    font-size: 12px;
+    color: #333;
+}
+
+.event-detail {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+
+.event-detail.description {
+    white-space: normal;
+    
+}
+
+
+
+
+.plus-sign {
+    position: absolute;
+    bottom: 10px; /* Adjust vertical position */
+    right: 10px; /* Adjust horizontal position */
+    cursor: pointer;
+    width: 30px; /* Adjust size as needed */
+    height: 30px;
+}
+
+
+.event-title1{
+    width: 500px;
+    color: #ffffff;
+    font-size: 20px;
+    font-family: 'Google Sans';
+    font-weight: 700;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+
+
+.content-header h2{
+    padding-left: 20px;
+    padding-bottom: 5px;
+}
+
+.date-texts{
+    color: #ffffff;
+    font-size: 9px;
+    font-family: 'Google Sans';
+    font-weight: 100;
+    text-align: left;
+    padding-left: 10px;
+
+}
+
+.event-details-container {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+}
+
+.event-item:hover .event-details-container {
+    height: auto;
+    transform: scale(1.1); /* Scale the event item on hover */
+    }
+
+.event-description {
+    color: #ffffff;
+    font-size: 9px;
+    font-family: 'Google Sans';
+    font-weight: 100;
+    text-align: left;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+/* Add any additional styling as needed */

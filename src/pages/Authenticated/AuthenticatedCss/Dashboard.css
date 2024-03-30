@@ -1,11 +1,9 @@
-.dashboard-wrapper{
+.dashboard-wrapper {
     display: flex;
     justify-content: center;
-
 }
 
-
-.dashboard-welcome-text h1{
+.dashboard-welcome-text h1 {
     padding-top: 40px;
     padding-left: 10px;
     padding-right: 10px;
@@ -13,32 +11,74 @@
     margin-bottom: 0px;
 }
 
-
-
-.dashboard-content{
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 20px;
-    
+.dashboard-content {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 40px;
+    padding-bottom: 300px;
 }
 
-.dashboard-item-container{
-    display: grid;
+.dashboard-item-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
     gap: 1.5rem;
     text-align: justify;
     width: 900px;
     height: 400px;
     overflow-x: hidden;
     overflow-y: auto;
-    scrollbar-width: none;   
+    scrollbar-width: none;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 10px;
 }
 
-.event-item{
+.event-item-home {
     display: flex;
-    border: 1px solid black; /* Set border width and make it transparent */
-    border-radius: 10px; /* Set border radius to create rounded corners */
-    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1); /* Add box shadow for a cool effect */
+    flex-direction: column;
+    background-color: rgba(144, 93, 3, 0.99);
+    border-radius: 15px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1);
     padding: 40px;
-    
+    width: 500px;
+    position: relative;
+    transition: transform 0.3s ease;
 }
 
+.event-item-home:hover {
+    transform: scale(1.10);
+}
+
+.event-details {
+    color: #ffffff;
+    font-family: 'Google Sans';
+    font-weight: 700;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.date-texts {
+    color: #ffffff;
+    font-family: 'Google Sans';
+    font-weight: 100;
+    text-align: left;
+    padding-top: 10px;
+}
+
+.event-description {
+    color: #ffffff;
+    font-family: 'Google Sans';
+    font-weight: 100;
+    text-align: left;
+    padding-top: 10px;
+}
+
+.delete-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
