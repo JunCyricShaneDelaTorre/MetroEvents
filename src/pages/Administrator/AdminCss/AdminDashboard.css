@@ -1,22 +1,12 @@
 .admin-dashboard-wrapper{
     padding-top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+    height: 80vh;
+    
 }
 
 .admin-dashboard-container{
     display: flex;
     flex-direction: column;
-}
-
-.admin-dashboard-content{
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    height: 600px;
-
 }
 
 .admin-dashboard-header{
@@ -37,19 +27,25 @@
 }
 
 .test-requests{
-    margin-left: 190px;
-    margin-right: 190px;
+    margin-left: 300px;
+    margin-right: 300px;
     display: grid;
     gap: .1rem;
-    
 }
 
 .test-item{
-    margin-top: 15px;
-    width: 100%;
-    height: 50px;
-    background: linear-gradient(180deg, rgba(217, 217, 217, 0.22) 0%, rgba(198.98, 210.37, 153.40, 0.49) 100%);
-    border-radius: 15px; /* assuming you meant '37px' for border-radius */
-    border: 1px solid #C7D299; /* assuming you meant '37px' for border-radius */
+    border: 2px solid black;
+    border-radius: 3px;
 }
 
+.request-item {
+    display: flex;
+    background-color: rgba(144, 93, 3, 0.99);
+    border-radius: 15px; /* Set border radius to create rounded corners */
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1); /* Add box shadow for a cool effect */
+    padding: 40px;
+    width: 1200px;
+    height: 20px;
+    position: relative;
+    transition: transform 0.3s ease;
+}

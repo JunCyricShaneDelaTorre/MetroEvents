@@ -1,14 +1,41 @@
 import * as React from 'react';
-import './PublicPageCss/EventBrowserPage.css';
-import Plus from './Plus.png';
+import './PublicPageCss/EventBrowserPage.css'
+// import { Link } from 'react-router-dom';
+import axios from 'axios';
+import { useState, useEffect } from 'react'; 
+import { Link, useNavigate } from 'react-router-dom';
 
-export default function EventBrowserPage() {
-    const handlePlusButtonClick = () => {
-        console.log('Plus button clicked');
-        alert('Login first to join event!');
-    };
 
-    return (
+export default function EventBrowserPage(){
+    const [events, setEvents] = useState([]);
+    const ls_user_id = localStorage.userId;
+    const navigate = useNavigate()
+     useEffect(() => {
+         // Fetch events from backend when the component mounts
+         axios.get('http://localhost:8081/events')
+             .then(response => {
+                 setEvents(response.data);
+             })
+             .catch(error => {
+                 console.error('Error fetching events:', error);
+             });
+     }, []); // Empty dependency array ensures this effect runs only once after the component mounts
+
+     const handleRegister = (curr_event_id) => {
+        const pending = "pending"
+        const date_now = new Date()
+        console.log(ls_user_id, curr_event_id, pending, date_now)
+        
+            axios.post('http://localhost:8081/home/eventRegistrationPending', {ls_user_id, curr_event_id, pending, date_now})
+            .then(res => {
+                alert("Event now registered!")
+                navigate('/home')
+            })
+        .catch(err => console.log(err));
+    }
+
+     return(
+
         <div className='eventBrowser-wrapper'>
             <div className='eventBrowser-container'>
                 <div className='welcome-text'>
@@ -19,28 +46,16 @@ export default function EventBrowserPage() {
                         <h2>Featured events for this week</h2>
                     </div>
                     <div className='event-container'>
-                        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15].map((event, index) => (
-                            <div className="event-item" key={index}>
-                                <div className='event-detail'>
-                                    <div className='event-title1'>InnovateCon</div>
-                                    <div className='event-details-container'>
-                                        <div className='date-texts'>
-                                            <strong>Start Date:</strong> March 28, 2024
-                                        </div>
-                                        <div className='date-texts'>
-                                            <strong>End Date:</strong> March 30, 2024
-                                        </div>
-                                        <div className='event-description'>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae velit sit amet lectus fermentum interdum.
-                                        </div>
-                                    </div>
-                                </div>
-                                <img
-                                    src={Plus}
-                                    alt="plus sign"
-                                    className="plus-sign"
-                                    onClick={handlePlusButtonClick}
-                                />
+                        {/* Map over events and render each event */}
+                        {events.map(event => (
+                            <div key={event.event_id} className='event-item'>
+                                <strong>{event.title}</strong>
+                                <p>{event.description}</p>
+                                <p>Start date: {event.start_date}</p>
+                                <p>End date: {event.end_date}</p>
+                                <Link onClick={() => handleRegister(event.event_id)}>R</Link>
+                                {/* Additional event details can be displayed here */}
+
                             </div>
                         ))}
                     </div>

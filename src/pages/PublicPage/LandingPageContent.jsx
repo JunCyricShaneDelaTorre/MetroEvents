@@ -10,7 +10,7 @@ export default function LandingPageContent(){
         // Handle button click event
       };
 
-
+      
     return(
         
             <div className='container2'>

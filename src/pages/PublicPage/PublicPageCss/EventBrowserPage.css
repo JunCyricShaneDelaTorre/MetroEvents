@@ -34,8 +34,7 @@
     overflow-x: hidden;
     overflow-y: auto;
     scrollbar-width: none;
-    text-align: justify;
-    width: 900px;
+    width: 1100px;
     height: 600px;
     justify-content: space-around;   
     margin: auto;
@@ -65,14 +64,20 @@
 
 .event-item {
     display: flex;
+    flex-direction: column;
     background-color: rgba(144, 93, 3, 0.99);
     border-radius: 15px; /* Set border radius to create rounded corners */
     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1); /* Add box shadow for a cool effect */
-    padding: 40px;
-    width: 160px;
-    height: 80px;
+    padding: 80px;
+    width: 140px;
+    height: 200px;
     position: relative;
     transition: transform 0.3s ease; /* Add smooth transition effect */
+    justify-content: center;
+}
+.event-item p{
+    margin-top: 0px;
+    margin-bottom: 5px;
 }
 
 .event-item:hover {
