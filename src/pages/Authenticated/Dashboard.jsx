@@ -38,26 +38,27 @@ export default function Dashboard(){
             });
             
     }, []); 
+    
     console.log(events);
-    const handleDeleteButtonClick = (eventId) => {
-        // Display confirmation dialog
-        const confirmDelete = window.confirm("Are you sure you want to delete this event registration?");
+    
+    const handleDeleteButtonClick = (eventId, userId) => {
+                // Display confirmation dialog
+                console.log("Event ID:", eventId);
+                console.log("User ID:", userId);
+                const confirmDelete = window.confirm("Are you sure you want to delete this event registration?");
         
-        // If user confirms, delete event registration
-        if (confirmDelete) {
-            // Make a DELETE request to delete the event registration
-            axios.delete(`http://localhost:8081/eventRegistration/${eventId}`)
-                .then(response => {
-                    // Remove the deleted event from the events state
-                    setEvents(events.filter(event => event.event_id !== eventId));
-                    alert("Event registration deleted successfully!");
-                })
-                .catch(error => {
-                    console.error('Error deleting event registration:', error);
-                    alert("Error deleting event registration. Please try again later.");
-                });
-        }
-    }
+                // If user confirms, delete event registration
+                if (confirmDelete) {
+                    axios.delete(`http://localhost:8081/eventRegistration/${eventId}/${userId}`)
+                    .then(response => {
+                        console.log('Event registration deleted successfully');
+                        // Update the state or perform any other necessary actions
+                    })
+                    .catch(error => {
+                        console.error('Error deleting event registration:', error);
+                    });
+                }
+    };
 
     return(
         <div className='dashboard-wrapper'>
@@ -83,10 +84,13 @@ export default function Dashboard(){
                                     <strong>Start Date:</strong> {event.start_date}
                                 </div>
                                 <div className='date-texts'>
+                                    {event.registration_date}
+                                </div>
+                                <div className='date-texts'>
                                     <strong>End Date:</strong> {event.end_date}
                                 </div>
                                 <div className='event-description'>
-                                    {event.description}
+                                    {event.description} 
                                 </div>
                                 <div className='event-description'>
                                     {event.registration_status}
@@ -96,7 +100,7 @@ export default function Dashboard(){
                                 src={Delete}
                                 alt="delete icon"
                                 className="delete-icon"
-                                onClick={() => handleDeleteButtonClick(event.event_id)}
+                                onClick={() => handleDeleteButtonClick(event.event_id, localStorage.userId)}
                             />
                         </div>
                     ))}
@@ -129,7 +133,7 @@ export default function Dashboard(){
                                 src={Delete}
                                 alt="delete icon"
                                 className="delete-icon"
-                                onClick={() => handleDeleteButtonClick(eventA.event_id)}
+                                //  onClick={() => handleDeleteButtonClick(eventA.event_id)}
                             />
                         </div>
                     ))}
