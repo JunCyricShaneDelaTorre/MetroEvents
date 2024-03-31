@@ -26,6 +26,7 @@ import AdminNotif from './pages/Administrator/AdminNotif';
 
 
 
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -61,12 +62,14 @@ const router = createBrowserRouter([
       },
       {
         path: 'OrganizeEvents', // jqifiqngojaf
+
         element: <div><OrganizerDashboard /> <Footer /></div>
 
       },
       {
         path:'BrowseEvents',
         element:<div><EventBrowserPage /></div>,
+
       },
       {
         path:'Profile',
@@ -100,6 +103,7 @@ const router = createBrowserRouter([
  },
   //test rani na route to see the contents
   
+
   {
     path:'footer',
     element: <Footer />,
@@ -110,6 +114,7 @@ const router = createBrowserRouter([
   path:'AdminNotifications',
   element: <div><AdminHeader/> <AdminNotif /> </div>
  }
+
   
 ]);
 

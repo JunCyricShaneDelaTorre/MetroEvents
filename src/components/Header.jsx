@@ -50,6 +50,7 @@ export default function Header() {
 
     }, []);
 
+
     return (
         <div className='nav-wrapper'>
             <div className='nav-container'> 
@@ -68,6 +69,7 @@ export default function Header() {
                             ) : (
                                 <Link to={'/home/OrganizeEvents'} className='Create'><img src={Create} alt="" /></Link>
                             )}
+
                             </div>
 
                             <div className='nav'>
@@ -85,6 +87,7 @@ export default function Header() {
                             </div>
                             <div className='nav'>
                                 <Link to={'/'} className='Signout' onClick={handleSignOut}><img src={Signout} alt="" /></Link>
+
                             </div>
                             
                             

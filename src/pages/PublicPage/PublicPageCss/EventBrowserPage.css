@@ -79,6 +79,7 @@
     margin-top: 0px;
     margin-bottom: 5px;
 }
+
 .event-item:hover {
     transform: scale(1.1); /* Scale the event item on hover */
 }

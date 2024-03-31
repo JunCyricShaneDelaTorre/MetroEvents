@@ -57,6 +57,7 @@ export default function Dashboard(){
                     alert("Error deleting event registration. Please try again later.");
                 });
         }
+
     }
 
     return(
@@ -66,7 +67,6 @@ export default function Dashboard(){
                     <h1>Your Events</h1>
                 </div>
 
-                
                 <div className='dashboard-content'>
                 <div className='welcome-text'>
                     <h3>Pending:</h3>
@@ -100,6 +100,7 @@ export default function Dashboard(){
                             />
                         </div>
                     ))}
+
                     </div>
                     <div className='welcome-text'>
                     <h3>Approved:</h3>
@@ -135,6 +136,7 @@ export default function Dashboard(){
                     ))}
                     </div>
                 </div>
+
             </div>
         </div>
     )
