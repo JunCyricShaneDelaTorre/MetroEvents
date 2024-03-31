@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Link} from 'react-router-dom';
+import {Link, useNavigate } from 'react-router-dom';
 import './AdminCss/AdminHeader.css';
 import Logo from './Logo.png';
 import Events from './Events.png';
@@ -9,6 +9,15 @@ import Notification from './Notification.png';
 import Signout from './Signout.png';
 
 export default function AdminHeader(){
+    const navigate = useNavigate();
+
+    const handleSignOut = () => {
+        // Clear user information from local storage
+        localStorage.removeItem('adminId');
+        // Redirect user to login page
+        navigate('/admin');
+    };
+
     return(
         <div className='nav-wrapper'>
             <div className='nav-container'> 
@@ -37,10 +46,10 @@ export default function AdminHeader(){
 
                         <div className='right-container'>
                             <div className='nav'>
-                                <Link to={'Notifications'} className='Notification'><img src={Notification} alt="" /></Link>
+                                <Link to={'/AdminNotifications'} className='Notification'><img src={Notification} alt="" /></Link>
                             </div>
                             <div className='nav'>
-                                <Link to={'/'} className='Signout'><img src={Signout} alt="" /></Link>
+                                <Link to={'/'} className='Signout'><img src={Signout} onClick={handleSignOut} alt="" /></Link>
                             </div>
                             
                             

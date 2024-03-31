@@ -3,33 +3,36 @@ import { useNavigate } from 'react-router-dom';
 import './PublicPageCss/SignUpPage.css';
 import axios from 'axios';
 import { useState } from 'react'
+import validation from '../../Validations/SignUpValidation';
+
 
 export default function SignUpPage() {
-    const navigate = useNavigate();
-    const [formData, setFormData] = useState({
-        Email: '',
-        FirstName: '',
-        LastName: '',
-        Password: '',
-        UserType: 'user', // Assuming default user type is 'user'
-    });
-
-    const handleChange = (e) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
-    };
-
-    const handleSubmit = async (e) => {
+    const navigate = useNavigate()
+    const[values, setValues] = useState({
+        email: '',
+        password: '',
+        first_name: '',
+        last_name: ''
+    })
+    const handleSubmit = (e) => {
         e.preventDefault();
-        try {
-            const response = await axios.post('http://127.0.0.1:8000/sample/api/register/', formData);
-            console.log('Registration successful:', response.data);
-            // Add code to handle successful registration (e.g., redirect user)
-            navigate('/login');
-        } catch (error) {
-            console.error('Registration failed:', error.response.data);
-            // Add code to handle registration failure (e.g., display error message)
+        setErrors(validation(values));
+        if(errors.email === "" && errors.password === "" && errors.first_name === "" && errors.last_name==="") {
+            axios.post('http://localhost:8081/signup', values)
+            .then(res => {
+                navigate('/')
+            })
+            .catch(err => console.log(err));
+
         }
-    };
+    }
+
+    const [errors, setErrors] = useState('')
+
+
+    const handleInput = (e) => {
+        setValues(prev => ({...prev, [e.target.name]: [e.target.value]}))
+    }
 
     return(
         <div className='signup-wrapper'>
@@ -49,10 +52,12 @@ export default function SignUpPage() {
                                     type='email'
                                     placeholder='name@gmail.com'
                                     className='input-box'
-                                    name='Email'
-                                    value={formData.Email}
-                                    onChange={handleChange}
+                                    name='email'
+                                    // value={formData.Email}
+                                    onChange={handleInput}
                                 />
+                            {errors.email && <span> {errors.email} </span>}
+
                             </div>
                         </div>
                         <div className='signup-password-content'>
@@ -62,10 +67,12 @@ export default function SignUpPage() {
                                     type='password'
                                     placeholder='Password'
                                     className='input-box'
-                                    name='Password'
-                                    value={formData.Password}
-                                    onChange={handleChange}
+                                    name='password'
+                                    // value={formData.Password}
+                                    onChange={handleInput}
                                 />
+                            {errors.password && <span> {errors.password} </span>}
+
                             </div>
                         </div>
                         <div className='firstname-content'>
@@ -75,10 +82,11 @@ export default function SignUpPage() {
                                     type='text'
                                     placeholder='Input your name here'
                                     className='input-box'
-                                    name='FirstName'
-                                    value={formData.FirstName}
-                                    onChange={handleChange}
+                                    name='first_name'
+                                    // value={formData.FirstName}
+                                    onChange={handleInput}
                                 />
+                                {errors.first_name && <span> {errors.first_name} </span>}
                             </div>
                         </div>
                         <div className='lastname-content'>
@@ -88,10 +96,11 @@ export default function SignUpPage() {
                                     type='text'
                                     placeholder='Input your last name here'
                                     className='input-box'
-                                    name='LastName'
-                                    value={formData.LastName}
-                                    onChange={handleChange}
+                                    name='last_name'
+                                    // value={formData.LastName}
+                                    onChange={handleInput}
                                 />
+                                {errors.last_name && <span> {errors.last_name} </span>}
                             </div>
                         </div>
                         <button type='submit' className='submit-button'>

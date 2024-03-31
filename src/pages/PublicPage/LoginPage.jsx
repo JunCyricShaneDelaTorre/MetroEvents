@@ -3,89 +3,88 @@ import { useNavigate } from 'react-router-dom';
 import './PublicPageCss/LoginPage.css';
 import axios from 'axios';
 import { useState } from 'react'; // Removed redundant import of 'useEffect'
+import validation from '../../Validations/LoginValidation';
 
 export default function LoginPage() {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [error, setError] = useState(null);
-
     const navigate = useNavigate();
+    const[values, setValues] = useState({
+        email: '',
+        password: ''
+    })
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setErrors(validation(values));
 
-    const handleSubmit = async (event) => {
-        event.preventDefault();
-
-        try {
-            console.log('Data sent in the request:', { Email: email, Password: password });
-            
-            const csrftoken = getCookie('csrftoken');
-
-            const response = await axios.post('http://127.0.0.1:8000/sample/api/login/', {
-                Email: email, // Check if backend expects 'Email' instead of 'email'
-                Password: password
-            }, {
-                headers: {
-                    'X-CSRFToken': csrftoken
-                }
-            });
-
-            console.log('Response:', response.data);
-            navigate('/dashboard');
-
-        } catch (error) {
-            console.error('Error:', error.response.data);
-            setError(error.response.data.error);
+        if (errors.email === "" && errors.password === "") {
+            axios.post('http://localhost:8081/login', values)
+                .then(res => {
+                    const { success, userId } = res.data; // Destructure response data
+    
+                    if (success) {
+                        // Store user_id in localStorage
+                        localStorage.setItem('userId', userId);
+                        // console.log(userId)
+                        navigate('/Home');
+                    } else {
+                        alert("Invalid credentials");
+                    }
+                })
+                .catch(err => console.log(err));
         }
-    };
+    }
 
-    const getCookie = (name) => {
-        const cookieValue = document.cookie.match('(^|;)\\s*' + name + '\\s*=\\s*([^;]+)');
-        return cookieValue ? cookieValue.pop() : '';
-    };
+    const [errors, setErrors] = useState('')
 
+
+    const handleInput = (e) => {
+        setValues(prev => ({...prev, [e.target.name]: [e.target.value]}))
+    }
+    
     return (
         <div className='login-wrapper'>
             <div className='login-container'>
                 <div className='welcome-section'>
                     <h1 className='welcome-text'>Welcome to PlanTek</h1>
-                    <div className='secondary-text'>
-                        Sign in below
-                    </div>
+                    <div className='secondary-text'>Sign in below</div>
                 </div>
                 <div className='login-form'>
-                <form className='form-content' onSubmit={handleSubmit}>
-                    <div className='email-content'>
-                        <div>Email:</div>
-                        <div className='input-email'>
-                            <input 
-                                type="email" 
-                                name='Email'  // Use 'Email' as the input name
-                                placeholder='name@gmail.com' 
-                                className='input-box' 
-                                value={email} 
-                                onChange={(e) => setEmail(e.target.value)}
-                            />
+                    <form className='form-content' onSubmit={handleSubmit}>
+                        <div className='email-content'>
+                            <div>Email:</div>
+                            <div className='input-email'>
+                                <input
+                                    type='email'
+                                    name='email'
+                                    placeholder='name@gmail.com'
+                                    className='input-box'
+                                    
+                                    onChange = {handleInput}
+                                />
+                                {errors.email && <span> {errors.email} </span>}
+                            </div>
                         </div>
-                    </div>
-                    <div className='password-content'>
-                        <div>Password:</div>
-                        <div className="input-password">
-                            <input 
-                                type='password' 
-                                name='Password'  // Use 'Password' as the input name
-                                placeholder='Password' 
-                                className='input-box' 
-                                value={password} 
-                                onChange={(e) => setPassword(e.target.value)}
-                            />
+                        <div className='password-content'>
+                            <div>Password:</div>
+                            <div className='input-password'>
+                                <input
+                                    type='password'
+                                    name='password'
+                                    placeholder='Password'
+                                    className='input-box'
+                                    
+                                    onChange = {handleInput}
+                                />
+                            </div>
+                            {errors.password && <span> {errors.password} </span>}
                         </div>
-                    </div>
-                    <button type='submit' className='submit-button'>
-                        <div className='btn-text'>Login</div>
-                    </button>
-                </form>
-                    {error && <div className="error-message">{error}</div>}
+                        <button type='submit' className='submit-button'>
+                            <div className='btn-text'>Login</div>
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
     );
 }
+
+

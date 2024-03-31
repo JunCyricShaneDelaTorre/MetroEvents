@@ -19,6 +19,9 @@ import AdminLogin from './pages/Administrator/AdminLogin';
 import AdminHeader from './pages/Administrator/AdminHeader';
 import EventCreationPage from './pages/Authenticated/EventCreationPage';
 import Footer from './components/Footer';
+import OrganizerDashboardAccepted from './pages/Organizer/OrganizerDashboardAccepted';
+import Notification from './pages/Authenticated/Notification';
+import AdminNotif from './pages/Administrator/AdminNotif';
 
 
 
@@ -57,17 +60,29 @@ const router = createBrowserRouter([
         element: <div><Dashboard /> <Footer /></div>,
       },
       {
-        path: 'OrganizeEvents',
+        path: 'OrganizeEvents', // jqifiqngojaf
         element: <div><OrganizerDashboard /> <Footer /></div>
 
       },
       {
         path:'BrowseEvents',
-        element:<div><EventBrowserPage /> <Footer /></div>,
+        element:<div><EventBrowserPage /></div>,
       },
       {
         path:'Profile',
         element:<ProfilePage />
+      },
+      {
+        path:'OrganizeDashboard/CreateEvent',
+        element: <EventCreationPage />
+      },
+      {
+        path:'OrganizeDashboard',
+        element:<OrganizerDashboardAccepted />, 
+      },
+      {
+        path:'Notifications',
+        element:<Notification />
       }
     ]
   },
@@ -79,21 +94,22 @@ const router = createBrowserRouter([
   },
  {
   path: 'AdminDashboard',
-  element: <div><AdminHeader/> <AdminDashboard /> </div>,
-  errorElement: <ErrorPage />
+  element: <div><AdminHeader/> <AdminDashboard /></div> ,
+  errorElement: <ErrorPage />,
+  
  },
   //test rani na route to see the contents
-  {
-    path:'CreateEvent',
-    element: <EventCreationPage />,
-    errorElement: <ErrorPage />,
-  },
+  
   {
     path:'footer',
     element: <Footer />,
     errorElement: <ErrorPage />,
-  }
- 
+  },
+
+ {
+  path:'AdminNotifications',
+  element: <div><AdminHeader/> <AdminNotif /> </div>
+ }
   
 ]);
 
