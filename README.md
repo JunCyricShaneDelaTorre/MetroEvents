@@ -15,6 +15,7 @@ const db = mysql.createConnection({
 })
 
 6. Some localhost servers may not be similar to what's configured as mine. Here is a hook example:
+  
    useEffect(() => {
          // Fetch events from backend when the component mounts
          axios.get('# http://localhost:8081/fetchRequests #')
