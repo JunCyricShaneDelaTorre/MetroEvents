@@ -1,4 +1,13 @@
-# Metro Events Backend
+## Metro Events Frontend
+
+Guide:
+
+1. Clone frontend repository
+2. Open folder and run 'npm install' to install necessary packages
+3. Make sure to have metro_backend repository cloned as well and setup its configurations based below
+4. run 'npm start'
+
+## Metro Events Backend
 https://github.com/ElijahFernandez/MetroEvents_Backend
 
 Guide
@@ -6,7 +15,7 @@ Guide
 2. Open folder and run 'npm install' to install necessary packages
 3. Import metro_events.sql to XAMPP
 4. Check 'server.js' and make sure it has the same credentials as this:
-   
+
 const db = mysql.createConnection({
     host: "localhost",
     user: "root",
@@ -15,6 +24,7 @@ const db = mysql.createConnection({
 })
 
 6. Some localhost servers may not be similar to what's configured as mine. Here is a hook example:
+7. run 'npm start'
   
    useEffect(() => {
          // Fetch events from backend when the component mounts
