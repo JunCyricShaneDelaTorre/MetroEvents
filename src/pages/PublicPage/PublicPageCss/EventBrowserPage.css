@@ -165,3 +165,7 @@
 }
 
 /* Add any additional styling as needed */
+.join-link{
+    text-decoration: none;
+    color: darkgreen;
+}

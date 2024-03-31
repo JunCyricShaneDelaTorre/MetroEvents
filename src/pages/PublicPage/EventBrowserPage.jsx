@@ -53,7 +53,7 @@ export default function EventBrowserPage(){
                                 <p>{event.description}</p>
                                 <p>Start date: {event.start_date}</p>
                                 <p>End date: {event.end_date}</p>
-                                <Link onClick={() => handleRegister(event.event_id)}>R</Link>
+                                <Link className='join-link' onClick={() => handleRegister(event.event_id)}>Join Now!</Link>
                                 {/* Additional event details can be displayed here */}
 
                             </div>

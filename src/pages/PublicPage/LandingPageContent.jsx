@@ -17,10 +17,7 @@ export default function LandingPageContent(){
             <Link to={'/'} className='Plantek'><img src={PlantekwLogo} alt="Plantek" /></Link>
             <div className='title'>Teknoys Unite! Plan the Perfect Event with PlanTek.</div>
             <div className='subtitle'>Turn Event Planning from Stress to Success</div>
-            <div className='buttonc'>
-                <Link to={'EventBrowser'} className='ViewEvent' ><CustomButton onClick={handleClick}>Explore Events</CustomButton></Link>
-                
-            </div>
+            
         </div>
     
     )

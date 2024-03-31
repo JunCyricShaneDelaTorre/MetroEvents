@@ -1,60 +1,59 @@
-.admin-dashboard-wrapper{
+.org-dashboard-wrapper{
     padding-top: 20px;
     height: 80vh;
     
 }
 
-.admin-dashboard-container{
+.org-dashboard-container{
     display: flex;
     flex-direction: column;
 }
 
-.admin-dashboard-header{
+.org-dashboard-header{
     display: flex;
     justify-content: center;
     width: 50%;
 }
 
-.name-status-action{
+.org-name-status-action{
     display: flex;
     justify-content: space-around;
     padding-bottom:20px ;
 }
 
-.status-and-action-container{
+.org-status-and-action-container{
     display: flex;
     gap: 5rem;
 }
 
-.test-requests{
+.e-title{
+    margin-right: 50px;
+    padding-left: 20px;
+}
+
+.org-test-requests{
     margin-left: 280px;
     margin-right: 280px;
     display: grid;
     gap: .1rem;
 }
 
-.test-item{
-    border: 2px solid black;
-    border-radius: 3px;
-}
 
-.request-item {
+
+.org-request-item {
     display: flex;
     background-color: rgba(144, 93, 3, 0.99);
     border-radius: 15px; /* Set border radius to create rounded corners */
     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1); /* Add box shadow for a cool effect */
     padding: 40px;
-    width: 900px;
+    width: 950px;
     height: 20px;
     transition: transform 0.3s ease;
     justify-content: space-between;
 
 }
-.user-id{
-    display: flex;
-    margin-left: 20px;
-}
-.user-id h3{
+
+.org-user-id h3{
     margin: 0px;
 }
 
@@ -77,8 +76,32 @@
     
 }
 .approve-link{
-    color: darkgreen;
+    color: black;
 }
 .reject-link{
+    color: darkred;
+}
+
+.org-right{
+    display: flex;
+    gap: 5rem;
+}
+
+.org-event-title p{
+    margin: 0px;
+}
+
+.org-accept, .org-reject{
+    text-decoration: none;
+}
+.org-accept-and-reject{
+    display: flex;
+    gap: 0.4rem;
+}
+
+.org-accept{
+    color: darkgreen;
+}
+.org-reject{
     color: darkred;
 }

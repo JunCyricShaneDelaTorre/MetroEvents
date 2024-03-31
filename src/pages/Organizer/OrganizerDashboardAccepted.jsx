@@ -2,7 +2,7 @@ import * as React from 'react';
 import './OrganizerCss/OrganizerDashboard.css'
 import { useState, useEffect } from 'react'; 
 import {Link} from 'react-router-dom';
-
+import './OrganizerCss/OrganizerDashboardAccepted.css';
 
 export default function OrganizerDashboardAccepted() {
     const [requests, setRequests] = useState([]);
@@ -39,36 +39,59 @@ export default function OrganizerDashboardAccepted() {
     };
     
     return (
-        <div className='admin-dashboard-wrapper'>
-            <div className='admin-dashboard-container'>
-                    <div className='admin-dashboard-header'>
+        <div className='org-dashboard-wrapper'>
+            <div className='org-dashboard-container'>
+                    <div className='org-dashboard-header'>
                         <h2>Requests</h2>
                     </div>
                     <div className='admin-dashboard-content'>
-                        <div className='name-status-action'>
+                        <div className='org-name-status-action'>
                             <div className='name-container'>
-                                <div>Name</div>
+                                <div>ID</div>
                             </div>
-                            <div className='status-and-action-container'>
-                                <div>Status</div>
+                            <div className='org-status-and-action-container'>
+                                <div className='e-title'>Event Title</div>
                                 <div>Action</div>
                             </div>
                         </div>
 
-                        <div className='test-requests'>
+                        <div className='org-test-requests'>
                         {requests.map((request, index) => (
-                            <div className='request-item' key={index}>
-                                <h3>{request.user_id}</h3>
-                                <p>{request.request_status}</p>
-                                <p>{request.event_title}</p> {/* Display event title */}
+                            <div className='org-request-item' key={index}>
+                                <div className='org-left'>
+                                    <div className='org-user-id'>
+                                        <h3>{request.user_id}</h3>
+                                    </div>
+                                </div>
+                                <div className='org-right'>
+                                    <div className='org-event-title'>
+                                        <p>{request.event_title}</p>
+                                    </div>
+                                    <div className='org-accept-and-reject'>
+                                        <div className='org-accept-link'>
+                                            <Link className='org-accept' onClick={() => handleApprove(request.registration_id, request.user_id, request.event_id)}>Approve</Link>
+                                        </div>
+                                        <div className='org-reject-link'>
+                                            <Link className='org-reject' to={`/rejectRequest/${request.registration_id}`}>Reject</Link>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+
+                                
+                                 {/* Display event title */}
                                 {/* <Link to={`/approveRequest/${request.registration_id}`}>Approve</Link> */}
-                                <button onClick={() => handleApprove(request.registration_id, request.user_id, request.event_id)}>Approve</button>
-                                <Link to={`/rejectRequest/${request.registration_id}`}>Reject</Link>
+                                
                             </div>
                         ))}
                         </div>
                     </div>
-                    <div>Create an event <Link to={'CreateEvent'}>here</Link>!</div>
+
+                    <div className='create-event-link'>
+                       <div> 
+                        Click <Link to={'CreateEvent'}> here</Link> to create more events!
+                        </div>
+                    </div>
             </div>
         </div>
     );

@@ -46,21 +46,34 @@ export default function AdminDashboard(){
                     <div className='admin-dashboard-content'>
                         <div className='name-status-action'>
                             <div className='name-container'>
-                                <div>Name</div>
+                                <div>ID</div>
                             </div>
                             <div className='status-and-action-container'>
                                 <div>Status</div>
                                 <div>Action</div>
+                                
                             </div>
                         </div>
 
                         <div className='test-requests'>
                         {requests.map(request => (
                             <div key={requests.request_id} className='request-item'>
-                                <h3>{request.user_id}</h3>
-                                <p>{request.request_status}</p>
-                                <Link onClick={() => handleApprove(request.request_id, request.user_id)}>Approve</Link>
-                                <Link>Reject</Link>
+                                <div className='user-id'><h3>{request.user_id}</h3></div>
+                                <div className='request-status-and-approve'>
+                                    <p>{request.request_status}</p>
+                                    <div className='approve-and-reject'>
+                                        <div className='approve'>
+                                            <Link className='approve-link' onClick={() => handleApprove(request.request_id, request.user_id)}>Approve</Link>
+                                        </div>
+                                        <div className='reject'>
+                                            <Link className='reject-link'>Reject</Link>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                                
+                               
                                 {/* Additional event details can be displayed here */}
                             </div>
                         ))}
