@@ -35,20 +35,15 @@ export default function EventBrowserPage(){
     }
 
      return(
+
         <div className='eventBrowser-wrapper'>
             <div className='eventBrowser-container'>
-
                 <div className='welcome-text'>
                     <h1>Explore Events Here</h1>
                 </div>
-                <div className='event-secondary-text'>
-                    Explore events here, we feature new events weekly for you to explore!
-                </div>
                 <div className='eventBrowser-content'>
                     <div className='content-header'>
-                        <h2>
-                            Featured events for this week
-                        </h2>
+                        <h2>Featured events for this week</h2>
                     </div>
                     <div className='event-container'>
                         {/* Map over events and render each event */}
@@ -60,13 +55,12 @@ export default function EventBrowserPage(){
                                 <p>End date: {event.end_date}</p>
                                 <Link onClick={() => handleRegister(event.event_id)}>R</Link>
                                 {/* Additional event details can be displayed here */}
+
                             </div>
                         ))}
                     </div>
                 </div>
-
-            </div>            
+            </div>
         </div>
-        
-    )
+    );
 }

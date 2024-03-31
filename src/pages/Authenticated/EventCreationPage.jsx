@@ -43,6 +43,7 @@ export default function EventCreationPage() {
         setValues(prev => ({...prev, [e.target.name]: [e.target.value]}))
     }
 
+
     return (
         <div className='event-creation-wrapper'>
             <div className='event-creation-container'>
@@ -61,6 +62,7 @@ export default function EventCreationPage() {
                             name='title'
                             onChange={handleInput}
                             />
+
                         </div>
                         <div>
                             Start Date:
@@ -72,6 +74,7 @@ export default function EventCreationPage() {
                             name='start_date'
                             onChange={handleInput}
                             />
+
                         </div>
                         <div>
                             End Date:
@@ -83,6 +86,7 @@ export default function EventCreationPage() {
                             name='end_date'
                             onChange={handleInput} 
                             />
+
                         </div>
                         <div className='event-form-event-description'>
                             <textarea 
@@ -93,6 +97,7 @@ export default function EventCreationPage() {
                                     setDescription(e.target.value);
                                     handleInput(e);
                                 }}
+
                                 onKeyDown={handleKeyDown}
                             />
                         </div>

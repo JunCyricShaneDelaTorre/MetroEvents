@@ -29,11 +29,13 @@ export default function OrganizerDashboard() {
                 console.error('Error sending organizer request:', error);
             });
     }
+
     return (
         <div className='organizer-page-wrapper'>
             <div className='organizer-page-container'>
                 <div className='organizer-page-header-container'>
                     <div className='organizer-page-header-text'>Want to host one instead? Become an <Link onClick={handleRequest}>Organizer!</Link></div>
+
                 </div>
                 <div className='organizer-page-content-container'>
                     {/* Content goes here */}

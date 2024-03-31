@@ -42,6 +42,7 @@ export default function AdminDashboard(){
                     <div className='admin-dashboard-header'>
                         <h2>Requests</h2>
                     </div>
+
                     <div className='admin-dashboard-content'>
                         <div className='name-status-action'>
                             <div className='name-container'>
@@ -64,6 +65,7 @@ export default function AdminDashboard(){
                             </div>
                         ))}
                         </div>
+
                     </div>
             </div>
         </div>

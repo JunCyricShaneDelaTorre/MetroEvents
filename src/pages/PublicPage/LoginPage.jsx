@@ -46,6 +46,7 @@ export default function LoginPage() {
                 <div className='welcome-section'>
                     <h1 className='welcome-text'>Welcome to PlanTek</h1>
                     <div className='secondary-text'>Sign in below</div>
+
                 </div>
                 <div className='login-form'>
                     <form className='form-content' onSubmit={handleSubmit}>

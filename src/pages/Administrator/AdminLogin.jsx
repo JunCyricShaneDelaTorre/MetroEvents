@@ -50,6 +50,7 @@ export default function AdminLogin(){
                 </div>
                 <div className='admin-login-form'>
                     <form method='' className='form-content' onSubmit={handleSubmit}>
+
                         <div className='admin-email-content'>
                             <div>
                                 Email:
@@ -62,6 +63,7 @@ export default function AdminLogin(){
                                 className='input-box' 
                                 onChange = {handleInput}
                                 />
+
                             </div>
                         </div>
                         <div className='admin-password-content'>
@@ -76,6 +78,7 @@ export default function AdminLogin(){
                                 className='input-box' 
                                 onChange = {handleInput}
                                 />
+
                             </div>
                         </div>
                         <button type='admin-submit' className='submit-button'>
