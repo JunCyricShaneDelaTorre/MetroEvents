@@ -1,3 +1,34 @@
+# Metro Events Backend
+https://github.com/ElijahFernandez/MetroEvents_Backend
+
+Guide
+1. Clone backend repository | https://github.com/ElijahFernandez/MetroEvents_Backend |
+2. Open folder and run 'npm install' to install necessary packages
+3. Import metro_events.sql to XAMPP
+4. Check 'server.js' and make sure it has the same credentials as this:
+   
+const db = mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "",
+    database: "metro_events"
+})
+
+6. Some localhost servers may not be similar to what's configured as mine. Here is a hook example:
+   useEffect(() => {
+         // Fetch events from backend when the component mounts
+         axios.get('# http://localhost:8081/fetchRequests #')
+             .then(response => {
+                 setRequests(response.data);
+             })
+             .catch(error => {
+                 console.error('Error fetching requests:', error);
+             });
+     }, []);
+   
+localhost:8081 is the server for my nodemon run from this backend repo. Make sure to check if you have the same; else change it.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
